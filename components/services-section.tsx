@@ -10,18 +10,21 @@ const services = [
     title: "Taxation (ITR & GST)",
     description:
       "Comprehensive tax planning, ITR filing, and GST compliance services. We help you minimize tax liability while staying fully compliant.",
+    subServices: ["Tax planning", "Appeals", "Litigation", "GST"]
   },
   {
     icon: ClipboardCheck,
     title: "Audit & Assurance",
     description:
       "Statutory audits, internal audits, and tax audits conducted with precision. We ensure your financial statements are accurate and reliable.",
+    subServices: ["Statutory audit", "Internal Audit", "Tax audit", "Stock audit", "Management audit"]
   },
   {
     icon: Briefcase,
     title: "Business Consulting",
     description:
       "Strategic business advisory, startup setup assistance, and financial planning. We help you make informed decisions for sustainable growth.",
+    subServices: ["Startup Advisory", "Virtual CFO Services", "Transaction Advisory", "Funding Advisory", "Accounting Services"]
   },
   {
     icon: Scale,
@@ -67,7 +70,19 @@ export function ServicesSection() {
                     <service.icon className="h-7 w-7 text-navy group-hover:text-gold transition-colors" />
                   </div>
                   <h3 className="text-xl font-semibold text-navy mb-3">{service.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{service.description}</p>
+                  <p className="text-slate-600 leading-relaxed mb-4">{service.description}</p>
+                  {service.subServices && (
+                    <div className="mt-4">
+                      <ul className="space-y-2">
+                        {service.subServices.map((subService, subIndex) => (
+                          <li key={subIndex} className="text-sm text-slate-500 flex items-center">
+                            <span className="w-1.5 h-1.5 bg-gold rounded-full mr-2 flex-shrink-0"></span>
+                            {subService}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>

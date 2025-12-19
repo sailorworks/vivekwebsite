@@ -12,19 +12,19 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210",
+    value: "+91 99608 12453",
+    href: "tel:+919960812453",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "hello@finexpertca.com",
-    href: "mailto:hello@finexpertca.com",
+    value: "canivedandco@gmail.com",
+    href: "mailto:canivedandco@gmail.com",
   },
   {
     icon: MapPin,
     label: "Office",
-    value: "123 Finance Street, Mumbai, Maharashtra 400001",
+    value: "N/16, Rajlaxmi Compound, Kalher, Thane",
     href: "#",
   },
   {

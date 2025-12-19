@@ -23,7 +23,7 @@ export function Footer() {
           {/* Logo */}
           <a href="#home" className="mb-6">
             <span className="text-2xl font-bold text-white">
-              Fin<span className="text-gold">Expert</span> CA
+              Vivek Prasad & Co.
             </span>
           </a>
 
@@ -57,7 +57,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-slate-500 text-sm text-center">
-            © {new Date().getFullYear()} FinExpert CA. All rights reserved.
+            © {new Date().getFullYear()} Vivek Prasad & Co. All rights reserved.
           </p>
         </div>
       </div>

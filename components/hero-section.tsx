@@ -91,11 +91,11 @@ export function HeroSection() {
             className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-slate-700/50 max-w-2xl mx-auto"
           >
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-gold">15+</div>
+              <div className="text-3xl md:text-4xl font-bold text-gold">5+</div>
               <div className="text-slate-400 text-sm mt-1">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-gold">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-gold">100+</div>
               <div className="text-slate-400 text-sm mt-1">Happy Clients</div>
             </div>
             <div>

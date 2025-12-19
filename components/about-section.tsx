@@ -37,16 +37,17 @@ export function AboutSection() {
               About Us
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6 text-balance">
-              Your Trusted Partner in <span className="text-gold">Financial Excellence</span>
+              Your Trusted <span className="text-gold">Growth Partner</span> in Financial Excellence
             </h2>
             <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-              With over 15 years of experience, FinExpert CA has been at the forefront of providing exceptional
-              chartered accountancy services. Our commitment to excellence and client success has made us one of the
-              most trusted names in the industry.
+              With 5 years of dedicated experience, Vivek Prasad & Co. specializes in empowering SMEs and fast-growing 
+              businesses to achieve their financial goals. Our expertise lies in building robust financial systems that 
+              drive sustainable growth and ensure long-term success.
             </p>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-              We believe in building long-term relationships with our clients, understanding their unique needs, and
-              delivering tailored solutions that drive growth and ensure compliance.
+              We understand the unique challenges faced by growing businesses and provide tailored solutions that not only 
+              ensure compliance but also optimize financial performance. Our commitment is to be your strategic partner 
+              in navigating the complexities of business growth.
             </p>
 
             {/* Feature Pills */}

@@ -7,21 +7,21 @@ import { Card, CardContent } from "@/components/ui/card"
 const testimonials = [
   {
     quote:
-      "FinExpert CA transformed our approach to taxation. Their strategic planning saved us significant costs while keeping us fully compliant. Highly recommended!",
-    name: "Rajesh Sharma",
-    designation: "CEO, TechStart Solutions",
+      "I highly appreciate the professionalism of my Chartered Accountant. He is excellent at analyzing and resolving financial miscommunication and explains complex financial matters in a simple and clear way. He has created an organized office system that helps track every rupee spent and monitor all financial activities through well-structured, software-based processes. I highly recommend his services.",
+    name: "Shivkumar Pandey",
+    designation: "JD Control Power and Solutions",
   },
   {
     quote:
-      "The team's professionalism and expertise in audit services is unmatched. They identified key areas for improvement that we had overlooked for years.",
-    name: "Priya Mehta",
-    designation: "Director, Mehta Enterprises",
+      "CA Vivek Prasad has been a trusted partner for Leaderskey India Pvt Ltd right from our incorporation journey. Their team guided us seamlessly through company registration, GST and income tax compliance, and periodic filings, allowing us to focus fully on our core business. We highly appreciate their prompt support, clear communication, and practical solutions, and would strongly recommend their services to any growing company.",
+    name: "Director",
+    designation: "Leaders Key USW Associates Pvt Ltd",
   },
   {
     quote:
-      "From startup registration to ongoing compliance, FinExpert has been our trusted partner. Their guidance has been invaluable for our business growth.",
-    name: "Amit Patel",
-    designation: "Founder, GreenLeaf Organics",
+      "Aashapura Hardware has relied on Vivek Prasad & CO for over a year now, and their services have been outstanding. From GST compliance and TDS deductions to preparing our balance sheets and tax planning, they deliver everything on time with clear explanations tailored to our hardware retail operations. Their proactive approach to identifying cost-saving opportunities has directly boosted our profitability. We wholeheartedly recommend CA Vivek Prasad to fellow business owners seeking reliable accounting support.",
+    name: "Devendra Prajapati",
+    designation: "Business Owner, Aashapura Hardware",
   },
 ]
 

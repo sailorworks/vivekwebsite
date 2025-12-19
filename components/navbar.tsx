@@ -49,7 +49,7 @@ export function Navbar() {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
             <span className="text-2xl font-bold text-white">
-              Fin<span className="text-gold">Expert</span> CA
+              Vivek Prasad & Co.
             </span>
           </a>
 
