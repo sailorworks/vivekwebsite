@@ -81,7 +81,7 @@ export function AboutSection() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/professional-chartered-accountant-in-modern-office.jpg"
+                src="/professional-chartered-accountant-in-modern-office.jpeg"
                 alt="Professional chartered accountant team"
                 className="w-full h-auto object-cover"
               />

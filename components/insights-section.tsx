@@ -63,7 +63,7 @@ export function InsightsSection() {
                 className="relative aspect-square group cursor-pointer overflow-hidden rounded-lg"
               >
                 <img
-                  src={`/.jpg?height=300&width=300&query=${post.query}`}
+                  src={`/.jpeg?height=300&width=300&query=${post.query}`}
                   alt={`Instagram post ${post.id}`}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
