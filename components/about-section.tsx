@@ -79,7 +79,7 @@ export function AboutSection() {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-4/5 mx-auto">
               <img
                 src="/professional-chartered-accountant-in-modern-office.jpeg"
                 alt="Professional chartered accountant team"
