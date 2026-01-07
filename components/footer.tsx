@@ -23,7 +23,7 @@ export function Footer() {
           {/* Logo */}
           <a href="#home" className="mb-6">
             <span className="text-2xl font-bold text-white">
-              Vivek Prasad & Co.
+              VIVEK PRASAD & CO.
             </span>
           </a>
 

@@ -79,21 +79,21 @@ export function AboutSection() {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-4/5 mx-auto">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full lg:w-4/5 mx-auto">
               <img
                 src="/professional-chartered-accountant-in-modern-office.jpeg"
                 alt="Professional chartered accountant team"
                 className="w-full h-auto object-cover"
               />
               {/* Overlay Card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center">
-                    <Award className="h-7 w-7 text-navy" />
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gold flex items-center justify-center shrink-0">
+                    <Award className="h-6 w-6 sm:h-7 sm:w-7 text-navy" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-navy">ICAI Certified</div>
-                    <div className="text-slate-500">Institute of Chartered Accountants</div>
+                    <div className="text-lg sm:text-2xl font-bold text-navy">ICAI Certified</div>
+                    <div className="text-xs sm:text-slate-500">Institute of Chartered Accountants</div>
                   </div>
                 </div>
               </div>

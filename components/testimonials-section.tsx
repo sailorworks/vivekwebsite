@@ -55,7 +55,7 @@ export function TestimonialsSection() {
               transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
             >
               <Card className="h-full bg-white border border-slate-200 hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
+                <CardContent className="p-6 md:p-8">
                   <Quote className="h-10 w-10 text-gold/50 mb-4" />
                   <p className="text-slate-600 leading-relaxed mb-6 italic">&quot;{testimonial.quote}&quot;</p>
                   <div className="flex items-center gap-4">

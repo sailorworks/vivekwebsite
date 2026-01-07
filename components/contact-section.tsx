@@ -109,7 +109,7 @@ export function ContactSection() {
             <form
               action="https://formspree.io/f/YOUR_FORM_ID"
               method="POST"
-              className="bg-white rounded-2xl p-8 shadow-lg border border-slate-100"
+              className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-100"
             >
               <div className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">

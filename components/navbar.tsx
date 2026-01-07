@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -49,7 +50,7 @@ export function Navbar() {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
             <span className="text-2xl font-bold text-white">
-              Vivek Prasad & Co.
+              VIVEK PRASAD & CO.
             </span>
           </a>
 
@@ -88,30 +89,38 @@ export function Navbar() {
         </div>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden bg-navy/95 backdrop-blur-md border-t border-slate-700">
-            <div className="flex flex-col py-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => handleSmoothScroll(e, link.href)}
-                  className="text-slate-200 hover:text-gold transition-colors font-medium py-3 px-4"
-                >
-                  {link.name}
-                </a>
-              ))}
-              <div className="px-4 pt-4">
-                <Button
-                  className="w-full bg-gold hover:bg-gold-dark text-navy font-semibold"
-                  onClick={(e) => handleSmoothScroll(e as unknown as React.MouseEvent<HTMLAnchorElement>, "#contact")}
-                >
-                  Book Consultation
-                </Button>
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="lg:hidden bg-navy/95 backdrop-blur-md border-t border-slate-700 overflow-hidden"
+            >
+              <div className="flex flex-col py-6 px-4 space-y-2">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => handleSmoothScroll(e, link.href)}
+                    className="text-slate-200 hover:text-gold transition-colors font-medium py-3 px-4 rounded-lg hover:bg-white/5"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+                <div className="pt-4">
+                  <Button
+                    className="w-full bg-gold hover:bg-gold-dark text-navy font-semibold py-6 text-lg"
+                    onClick={(e) => handleSmoothScroll(e as unknown as React.MouseEvent<HTMLAnchorElement>, "#contact")}
+                  >
+                    Book Consultation
+                  </Button>
+                </div>
               </div>
-            </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   )
