@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 
 const footerLinks = [
@@ -21,8 +22,26 @@ export function Footer() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col items-center">
           {/* Logo */}
-          <a href="#home" className="mb-6">
-            <span className="text-2xl font-bold text-white">
+          <a href="#home" className="flex flex-col items-center gap-4 mb-6 group">
+            <div className="flex items-center gap-4">
+              <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-gold/30 bg-white transition-transform group-hover:scale-105">
+                <Image
+                  src="/logosized.png"
+                  alt="Vivek Prasad & Co. Logo"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-gold/30 bg-white transition-transform group-hover:scale-105">
+                <Image
+                  src="/calogoup.png"
+                  alt="CA Logo"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <span className="text-2xl font-bold text-white tracking-tight">
               VIVEK PRASAD & CO.
             </span>
           </a>

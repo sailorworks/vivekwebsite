@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -48,8 +49,16 @@ export function Navbar() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-white">
+          <a href="#home" className="flex items-center gap-3">
+            <div className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-gold/30 bg-white">
+              <Image
+                src="/logosized.png"
+                alt="Vivek Prasad & Co. Logo"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <span className="text-xl lg:text-2xl font-bold text-white tracking-tight">
               VIVEK PRASAD & CO.
             </span>
           </a>
