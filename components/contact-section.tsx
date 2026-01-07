@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { useForm, ValidationError } from "@formspree/react"
 
 const contactInfo = [
   {
@@ -36,6 +37,44 @@ const contactInfo = [
 ]
 
 export function ContactSection() {
+  const [state, handleSubmit] = useForm("xjgknweg")
+
+  if (state.succeeded) {
+    return (
+      <section id="contact" className="py-24 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg border border-slate-100"
+          >
+            <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h2 className="text-3xl font-bold text-navy mb-4">Message Sent Successfully!</h2>
+            <p className="text-slate-600 text-lg mb-8">
+              Thank you for reaching out. We have received your message and will get back to you within 24 hours.
+            </p>
+            <Button
+              onClick={() => window.location.reload()}
+              className="bg-gold hover:bg-gold-dark text-navy font-semibold px-8"
+            >
+              Send Another Message
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+    )
+  }
+
   return (
     <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
@@ -107,8 +146,7 @@ export function ContactSection() {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           >
             <form
-              action="https://formspree.io/f/YOUR_FORM_ID"
-              method="POST"
+              onSubmit={handleSubmit}
               className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-100"
             >
               <div className="space-y-6">
@@ -122,6 +160,7 @@ export function ContactSection() {
                       required
                       className="border-slate-200 focus:border-gold focus:ring-gold"
                     />
+                    <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 text-sm" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email Address</Label>
@@ -132,6 +171,12 @@ export function ContactSection() {
                       placeholder="john@example.com"
                       required
                       className="border-slate-200 focus:border-gold focus:ring-gold"
+                    />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      errors={state.errors}
+                      className="text-red-500 text-sm"
                     />
                   </div>
                 </div>
@@ -150,6 +195,12 @@ export function ContactSection() {
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
+                  <ValidationError
+                    prefix="Service"
+                    field="service"
+                    errors={state.errors}
+                    className="text-red-500 text-sm"
+                  />
                 </div>
 
                 <div className="space-y-2">
@@ -162,10 +213,21 @@ export function ContactSection() {
                     required
                     className="border-slate-200 focus:border-gold focus:ring-gold resize-none"
                   />
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                    className="text-red-500 text-sm"
+                  />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full bg-gold hover:bg-gold-dark text-navy font-semibold">
-                  Send Message
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={state.submitting}
+                  className="w-full bg-gold hover:bg-gold-dark text-navy font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {state.submitting ? "Sending..." : "Send Message"}
                 </Button>
 
                 <p className="text-sm text-slate-500 text-center">We typically respond within 24 hours.</p>
