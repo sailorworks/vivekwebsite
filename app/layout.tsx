@@ -11,7 +11,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "FinExpert CA | Chartered Accountant Services",
+  title: "Vivek Prasad & Co. | Chartered Accountant Services",
   description:
     "Expert Chartered Accountant services for taxation, audit, business consulting, and regulatory compliance. Simplifying tax & maximizing your wealth.",
   icons: {
