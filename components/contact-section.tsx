@@ -37,7 +37,7 @@ const contactInfo = [
 ]
 
 export function ContactSection() {
-  const [state, handleSubmit] = useForm("xjgknweg")
+  const [state, handleSubmit] = useForm("xdakqzrj")
 
   if (state.succeeded) {
     return (
@@ -59,7 +59,7 @@ export function ContactSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="text-3xl font-bold text-navy mb-4">Message Sent Successfully!</h2>
+            <h2 className="text-3xl font-bold text-navy mb-4">Thanks for joining!</h2>
             <p className="text-slate-600 text-lg mb-8">
               Thank you for reaching out. We have received your message and will get back to you within 24 hours.
             </p>
