@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import { Twitter, Linkedin, Instagram } from "lucide-react"
 
 const footerLinks = [
   { name: "Privacy Policy", href: "/privacy" },
@@ -10,10 +10,21 @@ const footerLinks = [
 ]
 
 const socialLinks = [
-  { name: "Facebook", icon: Facebook, href: "#" },
-  { name: "Twitter", icon: Twitter, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
-  { name: "Instagram", icon: Instagram, href: "#" },
+  { 
+    name: "LinkedIn", 
+    icon: Linkedin, 
+    href: "https://www.linkedin.com/in/ca-vivek-prasad?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+  },
+  { 
+    name: "Instagram", 
+    icon: Instagram, 
+    href: "https://www.instagram.com/cavivekandco?igsh=ZjlpN3psN3VqcDc=" 
+  },
+  { 
+    name: "Twitter", 
+    icon: Twitter, 
+    href: "https://x.com/CAVivek123" 
+  },
 ]
 
 export function Footer() {
