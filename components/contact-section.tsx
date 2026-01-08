@@ -187,6 +187,23 @@ export function ContactSection() {
                 </div>
 
                 <div className="space-y-2">
+                  <Label htmlFor="phone">Phone Number <span className="text-slate-400 font-normal">(Optional)</span></Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+91 98765 43210"
+                    className="border-slate-200 focus:border-gold focus:ring-gold"
+                  />
+                  <ValidationError
+                    prefix="Phone"
+                    field="phone"
+                    errors={state.errors}
+                    className="text-red-500 text-sm"
+                  />
+                </div>
+
+                <div className="space-y-2">
                   <Label htmlFor="service">Service of Interest</Label>
                   <Select name="service">
                     <SelectTrigger className="border-slate-200 focus:border-gold focus:ring-gold">

@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
 import { ServicesSection } from "@/components/services-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
-//// import { InsightsSection } from "@/components/insights-section"
+import { InsightsSection } from "@/components/insights-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
@@ -15,7 +15,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <TestimonialsSection />
-      {/* <InsightsSection /> */}
+      <InsightsSection />
       <ContactSection />
       <Footer />
     </main>
